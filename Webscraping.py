@@ -2,14 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 
-
-
 url='https://www.infibeam.com/Mobiles/search?mobiletype=smart-phone'
-
 res=requests.get(url).text
 result=BeautifulSoup(res,"lxml")
-
-
 
 with open('infibeam.csv','w',newline='') as f:
     f=csv.writer(f)
